@@ -94,7 +94,7 @@ export function FailedOrdersWidget({ period = 'month' }: FailedOrdersWidgetProps
               <tr key={order._id} className="hover:bg-gray-50 cursor-pointer">
                 <td className="px-4 py-3">
                   <Link
-                    href={`/orders/${order._id}`}
+                    href={`/orders/detail?id=${order._id}`}
                     className="text-blue-600 hover:underline font-medium"
                   >
                     {order._id.substring(0, 8)}...
