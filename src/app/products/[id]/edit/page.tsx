@@ -1,3 +1,4 @@
+import React from 'react';
 import ProductEditPage from './ProductEditPage';
 
 export function generateStaticParams() {
@@ -5,6 +6,11 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-export default function Page({ params }: { params: Promise<{ id: string }> }) {
-  return <ProductEditPage params={params} />;
+type Props = { params: Promise<{ id: string }> };
+
+export default function Page(props: Props) {
+  return React.createElement(
+    ProductEditPage as React.ComponentType<Props>,
+    props
+  );
 }
