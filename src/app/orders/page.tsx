@@ -262,29 +262,29 @@ function OrdersPageInner() {
                 {orders.map((order) => (
                   <tr key={order._id} className="border-b cursor-pointer hover:bg-gray-50">
                     <td className="px-4 py-3 text-sm">
-                      <Link href={`/orders/${order._id}`} className="block">
+                      <Link href={`/orders/detail?id=${order._id}`} className="block">
                         {order._id.substring(0, 8)}...
                       </Link>
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      <Link href={`/orders/${order._id}`} className="block">
+                      <Link href={`/orders/detail?id=${order._id}`} className="block">
                         {order.userId.name} ({order.userId.email})
                       </Link>
                     </td>
                     <td className="px-4 py-3 text-sm font-medium">
-                      <Link href={`/orders/${order._id}`} className="block">
+                      <Link href={`/orders/detail?id=${order._id}`} className="block">
                         ${order.total.toFixed(2)}
                       </Link>
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      <Link href={`/orders/${order._id}`} className="block">
+                      <Link href={`/orders/detail?id=${order._id}`} className="block">
                         <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
                           {order.status}
                         </span>
                       </Link>
                     </td>
                     <td className="px-4 py-3 text-sm">
-                      <Link href={`/orders/${order._id}`} className="block">
+                      <Link href={`/orders/detail?id=${order._id}`} className="block">
                         {new Date(order.createdAt).toLocaleDateString()}
                       </Link>
                     </td>

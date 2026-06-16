@@ -92,7 +92,7 @@ export default function ProductsPage() {
                 {filteredProducts.map((p) => (
                   <tr key={p._id} className="hover:bg-gray-50">
                     <td className="px-4 py-3">
-                      <Link href={`/products/${p._id}`} className="text-blue-600 hover:underline font-medium">
+                      <Link href={`/products/detail?id=${p._id}`} className="text-blue-600 hover:underline font-medium">
                         {p.name}
                       </Link>
                     </td>
