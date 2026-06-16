@@ -1,10 +1,12 @@
 # Ecommerce Admin
 
-Next.js admin panel for the Ecommerce ecosystem.
+Admin panel for the Ecommerce ecosystem, built with Next.js and deployed to GitHub Pages.
+
+**Live:** https://arturogonz-ic.github.io/ecommerceAdmin/
 
 ## Stack
 
-- Next.js (App Router)
+- Next.js (App Router, static export)
 - Tailwind CSS
 
 ## Features
@@ -30,6 +32,10 @@ Admin runs on `http://localhost:3000`. Requires the API running on `http://local
 | Variable | Description |
 |---|---|
 | `NEXT_PUBLIC_API_URL` | Base URL of the Ecommerce API (default: `http://localhost:4000`) |
+
+## Deployment
+
+Deployed automatically to GitHub Pages on every push to `main` via GitHub Actions. Set `NEXT_PUBLIC_API_URL` as a repository variable in GitHub Actions settings before deploying.
 
 ## Architecture
 
