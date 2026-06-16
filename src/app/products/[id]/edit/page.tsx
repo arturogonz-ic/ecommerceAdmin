@@ -5,4 +5,6 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-export default ProductEditPage;
+export default function Page({ params }: { params: Promise<{ id: string }> }) {
+  return <ProductEditPage params={params} />;
+}
