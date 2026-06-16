@@ -46,7 +46,7 @@ export default function NewProductPage() {
     }
 
     const product = await create(formData);
-    if (product) router.push(`/products/${product._id}`);
+    if (product) router.push(`/products/detail?id=${product._id}`);
   };
 
   return (
